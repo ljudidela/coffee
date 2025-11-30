@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmic Coffee Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="space-canvas"></canvas>
+
+    <nav>
+      <div class="logo">COSMIC BREW ☕️</div>
+      <div class="links">
+        <a href="#origin">Origin</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#order">Order</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-content">
+        <h1 class="glitch" data-text="WAKE UP IN ORBIT">WAKE UP IN ORBIT</h1>
+        <p>Experience the darkest roast in the galaxy with a sunrise finish.</p>
+        <a href="#order" class="cta-btn">Taste the Stars</a>
+      </div>
+    </header>
+
+    <section id="origin" class="section origin-section">
+      <h2>The Gravity Brew</h2>
+      <p class="subtitle">Beans pulled together by pure gravitational force.</p>
+      <div class="cup-container">
+        <div class="cup"></div>
+        <div class="steam"></div>
+        <!-- Beans will be injected here by JS -->
+        <div class="bean-cluster"></div>
+      </div>
+    </section>
+
+    <section id="recipes" class="section recipes-section">
+      <h2>Galactic Blends</h2>
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-icon">🪐</div>
+          <h3>Saturn Latte</h3>
+          <p>Rings of foamed milk with caramel asteroids.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">☄️</div>
+          <h3>Comet Espresso</h3>
+          <p>Ice cold brew with a fiery spicy finish.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌑</div>
+          <h3>Dark Matter</h3>
+          <p>0% Light. 100% Caffeine. Pure void.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="order" class="section order-section">
+      <h2>Initiate Launch Sequence</h2>
+      <form id="order-form">
+        <div class="input-group">
+          <input type="text" placeholder="Commander Name" required />
+        </div>
+        <div class="input-group">
+          <select>
+            <option>Select Fuel Type</option>
+            <option>Saturn Latte</option>
+            <option>Comet Espresso</option>
+            <option>Dark Matter</option>
+          </select>
+        </div>
+        <button type="submit" class="launch-btn">LAUNCH ORDER 🚀</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2024 Cosmic Coffee Shop. Brewed in Zero-G.</p>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
