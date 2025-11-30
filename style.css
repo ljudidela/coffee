@@ -1,0 +1,232 @@
+:root {
+  --bg-top: #0f0c29;
+  --bg-mid: #302b63;
+  --bg-bot: #ff4b1f;
+  --accent: #ffb347;
+  --text: #ffffff;
+  --font-head: 'Space Grotesk', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, var(--bg-top), var(--bg-mid), var(--bg-bot));
+  min-height: 100vh;
+}
+
+#space-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background: rgba(15, 12, 41, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 300;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: var(--accent);
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Hero */
+.hero h1 {
+  font-family: var(--font-head);
+  font-size: 4rem;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: var(--accent);
+  color: var(--bg-top);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 179, 71, 0.6);
+}
+
+/* Origin Section */
+.cup-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-top: 50px;
+}
+
+.cup {
+  width: 160px;
+  height: 100px;
+  background: white;
+  border-radius: 0 0 80px 80px;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  z-index: 2;
+  box-shadow: 0 0 30px rgba(255,255,255,0.2);
+}
+
+.cup::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: -35px;
+  width: 40px;
+  height: 50px;
+  border: 8px solid white;
+  border-radius: 0 20px 20px 0;
+}
+
+.bean-visual {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  background: #6f4e37;
+  border-radius: 50%;
+  top: -200px;
+  left: 50%;
+  opacity: 0;
+}
+
+/* Recipes */
+.cards-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Order Form */
+#order-form {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 40px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input, select {
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: white;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.launch-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #ff4b1f, #ff9068);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.launch-btn:active {
+  transform: scale(0.98);
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.5rem; }
+  .cards-container { flex-direction: column; }
+}
